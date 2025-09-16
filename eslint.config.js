@@ -17,15 +17,3 @@ module.exports = [
     pluginJs.configs.recommended,
 ]; 
 
-/*  *********************** Serveur Web ***************************   */
-// 
-var express = require('express'); 
- 
-var exp = express(); 
-
-exp.use(express.static(__dirname + '/www'));
-
-exp.get('/', function (req, res) {
-    console.log(‘Reponse a un client'); 
-    res.sendFile(__dirname + '/www/index.html');
-}); 
